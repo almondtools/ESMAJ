@@ -1,4 +1,4 @@
-# esmaj
+# ESMAJ
 
 This project is a collection of exact string matching algorithms.
 
