@@ -15,7 +15,7 @@ public class CLS {
 		/* Computation of hmax */
 		i = k = 1;
 		do {
-			while (x[i] == x[i - k])
+			while (i <= m && x[i] == x[i - k])
 				i++;
 			hmax[k] = i;
 			q = k + 1;
@@ -26,7 +26,7 @@ public class CLS {
 			k = q;
 			if (k == i + 1)
 				i = k;
-		} while (k <= m);
+		} while (k <= m && i <= m);
 
 		/* Computation of kmin */
 		for (i = 0; i < m; i++)
