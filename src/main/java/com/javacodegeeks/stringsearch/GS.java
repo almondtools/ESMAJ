@@ -32,7 +32,7 @@ public class GS {
 	private static void search(char[] x, int p, int n, int m, int s, int q,
 			char[] y, int p1, int q1, int k, List<Integer> result) {
 		while (p <= n - m) {
-			while (p + s + q < n && x[s + q] == y[p + s + q])
+			while (p + s + q < n && s + q < m && x[s + q] == y[p + s + q])
 				++q;
 			if (q == m - s && arrayCmp(x, 0, y, p, (s + 1)) == 0) {
 				result.add(p);
@@ -87,7 +87,7 @@ public class GS {
 
 	private static void newP1(char[] x, char[] y, int s, int q1, int p1, int q2,
 			int p2, int q, int p, int k, int m, int n, List<Integer> result) {
-		while (x[s + q1] == x[s + p1 + q1])
+		while (s + p1 + q1 < m && x[s + q1] == x[s + p1 + q1])
 			++q1;
 		if (p1 + q1 >= k * p1) {
 			p2 = q1;
